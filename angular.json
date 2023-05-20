@@ -93,5 +93,8 @@
       }
     }
   },
-  "defaultProject": "taskbox"
+  "defaultProject": "taskbox",
+  "cli": {
+    "analytics": "0e10e8f1-ddcf-464a-9a65-bd61aec2b8c2"
+  }
 }
