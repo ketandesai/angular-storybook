@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { PureTaskListComponent } from './task-list/pure-task-list.component';
+
 @NgModule({
-  declarations: [AppComponent, TaskComponent, TaskListComponent],
+  declarations: [AppComponent, TaskComponent, TaskListComponent, PureTaskListComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
