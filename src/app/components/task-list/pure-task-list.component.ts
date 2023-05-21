@@ -1,9 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-import { Task } from '../models/task.model';
+import { Task } from '../../models/task.model';
 
 @Component({
-  selector: 'app-task-list',
+  selector: 'app-pure-task-list',
   template: `
     <div class="list-items">
       <app-task
@@ -32,25 +31,20 @@ import { Task } from '../models/task.model';
     </div>
   `,
 })
-export class TaskListComponent {
+export class PureTaskListComponent {
   /**
    * @ignore
    * Component property to define ordering of tasks
    */
   tasksInOrder: Task[] = [];
 
-  /** Checks if it's in loading state */
   @Input() loading = false;
 
-  /** Event to change the task to pinned */
   // tslint:disable-next-line: no-output-on-prefix
-  @Output()
-  onPinTask = new EventEmitter<Event>();
+  @Output() onPinTask: EventEmitter<any> = new EventEmitter();
 
-  /** Event to change the task to archived */
   // tslint:disable-next-line: no-output-on-prefix
-  @Output()
-  onArchiveTask = new EventEmitter<Event>();
+  @Output() onArchiveTask: EventEmitter<any> = new EventEmitter();
 
   @Input()
   set tasks(arr: Task[]) {
